@@ -24,7 +24,7 @@ h1 {
 
 .teclado {
   background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
-  box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+  box-shadow: 6px 8px 0 6px #000, 10px 10px 10px #000;
   border-radius: 30px;
   display: grid;
   gap: 10px;
@@ -64,4 +64,21 @@ h1 {
 .tecla.active:focus,
 .tecla:active:focus {
   box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz);
+}
+
+p {
+  font-size: 14px;
+  color: #fff;
+}
+
+@media (max-width: 476px) {
+  .teclado {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 298px) {
+  .teclado {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
